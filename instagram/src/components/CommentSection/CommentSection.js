@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import Comment from "../Comment/Comment";
 import "./CommentSection.css";
 
 const CommentSection = props => {
