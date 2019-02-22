@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Posts from "../Posts/Posts";
 
 const PostContainer = props => {
@@ -6,4 +7,7 @@ const PostContainer = props => {
   return <div className="posts">{arr}</div>;
 };
 
+PostContainer.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 export default PostContainer;
