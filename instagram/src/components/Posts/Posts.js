@@ -33,6 +33,13 @@ const Posts = props => {
           {time}
           {" year ago"}
         </span>
+        <div className="post__comment__input__div">
+            <input
+              type="text"
+              className="post__comment__input"
+              placeholder="Add a comment..."
+            />
+          </div>
       </div>
     </div>
   );
