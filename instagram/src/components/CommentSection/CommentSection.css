@@ -12,6 +12,7 @@
     border-top: 1px solid #efefef;
     margin-top: 1rem;
     width: 100%;
+    
 }
 
 .post__comment__input {
@@ -33,3 +34,5 @@
 .post__comment__input:not(:placeholder-shown) {
     color: black;
 } 
+
+

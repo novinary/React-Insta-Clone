@@ -8,16 +8,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      posts: []
     };
   }
-  render() {
-    return (
-      <div className="App">
-        <SearchBar />
-        <PostContainer posts={dummyData} />
-      </div>
-    );
+//Used componentDidMount() to set your data to the component's state.
+//Used the state object to pass data to PostContainer component.
+  componentDidMount() {
+    this.setState({ posts: dummyData });
   }
+
+
+render() {
+  return (
+    <div className="App">
+        <SearchBar />
+      <PostContainer posts={this.state.posts} />
+    </div>
+  );
+}
 }
 
 export default App;
