@@ -17,8 +17,17 @@ const SearchBar= (props) => {
             <h1>|</h1>
             <h2 className="instagram-logo">Instagram</h2>
             </div>
-            <input className = "search-input" type="text" placeholder= "Search"/>
-            <button onClick= {props.search}>Button</button>
+            <form>       
+            <input className = "search-input" 
+            type="text" 
+            placeholder= "Search"
+            name="searchText"
+            onChange={props.searchHandler}
+            />
+            </form>
+
+
+            
             <div className="search-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>

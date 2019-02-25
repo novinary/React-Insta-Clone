@@ -9,9 +9,19 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
-      filteredData: []
+      results: ''
     };
   }
+  
+  searchHandler = (event) => {
+    console.log("called with " + event.username);
+    this.setState({
+      posts: this.state.posts.filter((item) =>{
+        return item.username.includes(event.target.value);
+      })
+    });
+  }
+  /*
   searchHandler = username => {
     console.log("called with " + username);
     if (username.length === 0) {
@@ -24,14 +34,17 @@ class App extends Component {
     console.log("new data  " + newFilterData);
     this.setState({ filteredData: newFilterData });
   };
+*/
 
   //Used componentDidMount() to set your data to the component's state.
   //Used the state object to pass data to PostContainer component.
-  componentDidMount() {
-    this.setState({ posts: dummyData });
+    componentDidMount() {
+      this.setState({ posts: dummyData });
+     // this.setState({ dummyData: dummyData.username });
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <SearchBar search={this.searchHandler} />
