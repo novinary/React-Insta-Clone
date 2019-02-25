@@ -15,10 +15,10 @@ class App extends Component {
   searchHandler = username => {
     console.log("called with " + username);
     if (username.length === 0) {
-      this.setState({ filteredData: this.state.datas });
+      this.setState({ filteredData: this.state.posts });
       return;
     }
-    const newFilterData = this.state.datas.filter(data => {
+    const newFilterData = this.state.posts.filter(data => {
       return data.username === username;
     });
     console.log("new data  " + newFilterData);
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar search={this.searchHandler} />
-        {<PostContainer posts={this.state.posts} />})
+        {<PostContainer posts={this.state.posts} />}
       </div>
     );
   }

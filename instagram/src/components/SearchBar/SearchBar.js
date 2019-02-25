@@ -17,7 +17,8 @@ const SearchBar= (props) => {
             <h1>|</h1>
             <h2 className="instagram-logo">Instagram</h2>
             </div>
-            <input className = "seach-input" type="text" placeholder= "Search"/>
+            <input className = "search-input" type="text" placeholder= "Search"/>
+            <button onClick= {props.search}>Button</button>
             <div className="search-icons">
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
@@ -27,5 +28,8 @@ const SearchBar= (props) => {
         </div>
     )
 }
+
+//invoke the props here
+
 
 export default SearchBar
