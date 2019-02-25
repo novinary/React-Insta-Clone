@@ -8,46 +8,30 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: [],
-      results: ''
+      posts: []
     };
   }
-  
-  searchHandler = (event) => {
-    console.log("called with " + event.username);
+  // filter method to filter the data based on what the user enters in the search input
+  searchHandler = event => {
     this.setState({
-      posts: this.state.posts.filter((item) =>{
+      posts: this.state.posts.filter(item => {
         return item.username.includes(event.target.value);
       })
     });
-  }
-  /*
-  searchHandler = username => {
-    console.log("called with " + username);
-    if (username.length === 0) {
-      this.setState({ filteredData: this.state.posts });
-      return;
-    }
-    const newFilterData = this.state.posts.filter(data => {
-      return data.username === username;
-    });
-    console.log("new data  " + newFilterData);
-    this.setState({ filteredData: newFilterData });
   };
-*/
 
-  //Used componentDidMount() to set your data to the component's state.
+  //Used componentDidMount() to set data to the component's state.
   //Used the state object to pass data to PostContainer component.
-    componentDidMount() {
-      this.setState({ posts: dummyData });
-     // this.setState({ dummyData: dummyData.username });
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+    // this.setState({ dummyData: dummyData.username });
   }
 
   render() {
     console.log(this.state);
     return (
       <div className="App">
-        <SearchBar search={this.searchHandler} />
+        <SearchBar searchHandler={this.searchHandler} />
         {<PostContainer posts={this.state.posts} />}
       </div>
     );
