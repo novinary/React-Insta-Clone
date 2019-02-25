@@ -24,7 +24,6 @@ class App extends Component {
   //Used the state object to pass data to PostContainer component.
   componentDidMount() {
     this.setState({ posts: dummyData });
-    // this.setState({ dummyData: dummyData.username });
   }
 
   render() {
