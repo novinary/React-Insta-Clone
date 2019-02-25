@@ -10,6 +10,10 @@ Update your state with the new comment
 (This should trigger your component tree to "re-render" with 
 your new comment on that post).
 */
-
+class CommentSection extends React.Component {
+  constructor() {
+    
+  }
+}
 
 export default CommentSection;
