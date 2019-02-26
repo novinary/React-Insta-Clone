@@ -1,11 +1,12 @@
 
-.comment-input {
+.post__comment{
     font-size: 0.9rem;
 }
 
 .username {
     cursor: pointer;
     font-weight: 600;
+    margin-right: 4px;
 } 
      
 .post__comment__input__div {

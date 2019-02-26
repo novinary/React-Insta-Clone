@@ -35,6 +35,5 @@ const SearchBar = props => {
   );
 };
 
-//invoke the props here
 
 export default SearchBar;
