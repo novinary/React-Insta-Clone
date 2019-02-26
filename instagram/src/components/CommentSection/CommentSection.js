@@ -47,7 +47,7 @@ render() {
 				<form>
 				<div className="post__comment__input__div">
 						<input
-								className="comment-input"
+								className="post__comment__input"
 								type="text"
 								name="currComment"
 								placeholder="Add a comment..."
