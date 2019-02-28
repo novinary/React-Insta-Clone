@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import LikePost from "../Posts/Posts";
 import "./Posts.css";
 
 const Posts = props => {
@@ -9,6 +10,7 @@ const Posts = props => {
   if (time > 1) {
     time = Math.round(time / 365);
   }
+
   return (
     <div className="post">
       <div className="post__header">
