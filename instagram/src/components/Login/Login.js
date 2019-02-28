@@ -24,10 +24,10 @@ class Login extends Component {
         return (
             <div>
                 <form className="login-form">
-                    <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleLoginChange} />
-                    <input type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.handleLoginSubmit} />
-                    <button onClick={this.handleLoginChange}>Log in</button>
-                </form>
+                    <input className="login-text" type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleLoginChange} />
+                    <input className="login-text" type="text" placeholder="Password" name="password" value={this.state.password} onChange={this.handleLoginSubmit} />
+                    <button className="login-btn" onClick={this.handleLoginChange}>Log in</button>
+            </form>
             </div>
         )
     }
