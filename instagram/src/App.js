@@ -1,36 +1,19 @@
-import React, { Component } from "react";
-import "./App.css";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
-import dummyData from "./dummy-data";
+import React, { Component } from 'react'
+import PostsPage from './components/PostContainer/PostsPage'
+import './App.css';
+
+
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      posts: []
-    };
+    this.state = {};
   }
-  // filter method to filter the data based on what the user enters in the search input
-  searchHandler = event => {
-    this.setState({
-      posts: this.state.posts.filter(item => {
-        return item.username.includes(event.target.value);
-      })
-    });
-  };
-
-  //Used componentDidMount() to set data to the component's state.
-  //Used the state object to pass data to PostContainer component.
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-  }
-
+  
   render() {
     return (
       <div className="App">
-        <SearchBar searchHandler={this.searchHandler} />
-        {<PostContainer posts={this.state.posts} />}
+      <PostsPage />
       </div>
     );
   }
