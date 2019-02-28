@@ -1,13 +1,7 @@
-import React from "react";
-import "./SearchBar.css";
-/*Note on React for future ref
-When React sees an element representing a user-defined component, 
-it passes JSX attributes to this component as a single object. 
-- component names should always start with a capital letter. 
-React treats components starting with lowercase letters as DOM tags
--
+import React from 'react';
+import './SearchBar.css';
+import styled from 'styled-components';
 
-*/
 //SearchBar Component returns social media icon elemnts as the result
 const SearchBar = props => {
   return (
