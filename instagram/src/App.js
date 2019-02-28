@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import PostsPage from './components/PostContainer/PostsPage'
+import React, { Component } from 'react';
 import './App.css';
-
+import PostsPage from './components/PostContainer/PostsPage'
+import withAuthenticate from './components/Authentication/withAuthenticate';
+import Login from './components/Login/Login';
 
 
 class App extends Component {
@@ -19,4 +20,5 @@ class App extends Component {
   }
 }
 
-export default App;
+//Invoke HOC function
+export default withAuthenticate(App);

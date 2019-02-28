@@ -1,6 +1,5 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
-import LikePost from "../Posts/Posts";
 import "./Posts.css";
 
 const Posts = props => {
