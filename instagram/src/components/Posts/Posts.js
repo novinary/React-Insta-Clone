@@ -2,7 +2,9 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import "./Posts.css";
 
+
 const Posts = props => {
+  const {thumbnailUrl, imageUrl, likes, comments, username} = props.post;
   let time = Math.round(
     (Date.now() - Date.parse(props.post.timestamp)) / 1000 / 60 / 60 / 24
   );
@@ -13,12 +15,12 @@ const Posts = props => {
   return (
     <div className="post">
       <div className="post__header">
-        <img className="post__profile" src={props.post.thumbnailUrl} alt="" />
+        <img className="post__profile" src={thumbnailUrl} alt="" />
         <div className="post__name">
           <span>{props.post.username}</span>
         </div>
       </div>
-      <img className="post__image" src={props.post.imageUrl} alt="" />
+      <img className="post__image" src={imageUrl} alt="" />
       <div className="post__body">
         <div className="post__body__buttons">
           <div className="main--buttons">
@@ -28,8 +30,8 @@ const Posts = props => {
           </div>
           <i className="far fa-bookmark" />
         </div>
-        <span className="post__likes">{props.post.likes} likes</span>
-        <CommentSection comments={props.post.comments} />
+        <span className="post__likes">{likes} likes</span>
+        <CommentSection comments={comments} />
         <span className="post__timestamp">
           {time}
           {" year ago"}
