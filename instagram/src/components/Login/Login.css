@@ -1,0 +1,15 @@
+.login-form {
+  width: 500px;
+  background: #b3ab9e;
+  border-radius: 6px;
+  margin: 10px auto;
+  padding: 10px 25px;
+}
+
+.login-btn {
+    margin-left: 16px;
+}
+
+.login-text {
+    margin-left: 16px;
+}
